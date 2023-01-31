@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Product;
-import util.PriceUpdate;
 
 public class Program {
 
@@ -23,7 +22,7 @@ public class Program {
 		
 		
 		//Default method: foreach of List interface -- executes the Consumer accept method for the argument
-		list.forEach(new PriceUpdate());//We now instantiate an object of a class that implements a Consumer interface
+		list.forEach(Product::staticProductUpdate); //Using a reference static method for filtering
 		
 		
 		list.forEach(System.out::println); //This is a reference method for println

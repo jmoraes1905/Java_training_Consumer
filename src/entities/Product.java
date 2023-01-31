@@ -23,11 +23,11 @@ public class Product {
 		this.price = price;
 	}
 	
-	public static boolean staticProductPredicate(Product p) { //STatic methods require own object argument to work with
-		return p.getPrice()>=100.00;
+	public static void staticProductUpdate(Product p) { //Static methods require own object argument to work with
+		 p.setPrice(p.getPrice()*1.10);
 	}
 	
-	public boolean nonStaticProductPredicate() {// non static methods work wit the same object in which it's defined, therefore we don't pass a Product as argument 
+	public boolean nonStaticProductUpdate() {// non static methods work wit the same object in which it's defined, therefore we don't pass a Product as argument 
 		return this.getPrice()>=100.00;
 	}
 	
