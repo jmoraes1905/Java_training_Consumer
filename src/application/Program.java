@@ -21,12 +21,10 @@ public class Program {
 		
 		//We want to increase products prices in 10%
 		
-		Consumer<Product> cons = p -> { //Declared lambda expression
-			
-			p.setPrice(p.getPrice()*1.10);
-		};
+		double readjustment = 1.10;
+		
 		//Default method: foreach of List interface -- executes the Consumer accept method for the argument
-		list.forEach(cons); //Using a reference static method for filtering
+		list.forEach(p->p.setPrice(p.getPrice()*readjustment)); //Using lambda expression in-line
 		
 		
 		list.forEach(System.out::println); //This is a reference method for println
